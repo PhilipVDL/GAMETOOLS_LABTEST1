@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c378fb1a74e4447862181db20f4a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myProfile: {fileID: 11400000, guid: 7b8b536d14fb73849ba149cf501eb5a5, type: 2}
+  myProfile: {fileID: 11400000, guid: bcaee77c398f77a45ac421700c938ee8, type: 2}
   recursionLevel: 0
 --- !u!54 &4506243358880460673
 Rigidbody:

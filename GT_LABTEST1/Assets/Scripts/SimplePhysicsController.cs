@@ -31,16 +31,14 @@ public class SimplePhysicsController : MonoBehaviour
         hInput = Input.GetAxis("Horizontal") * rotSpeed;
         eInput = -Input.GetAxis("Elevate") * rotSpeed;
 
-        if (transform.position.magnitude>20)
+        if (transform.position.y>30)
         {
             if (!nuked)
             {
                 Instantiate(nuke, Vector3.zero, Quaternion.identity);
                 nuked = true;
             }
-
         }
-
     }
 
     private void FixedUpdate()
