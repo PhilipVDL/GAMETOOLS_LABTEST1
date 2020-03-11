@@ -85,7 +85,12 @@ namespace GRIDCITY
                     if (!cityManager.CheckSlot(x, y + 1, z))
                     {
                         cityManager.SetSlot(x, y + 1, z, true);
-                        child = Instantiate(treePrefab, transform.position + Vector3.up * 1.01f, Quaternion.identity, this.transform);                      
+                        //ROOF ROTATION RANDOMIZER
+                        int randomRotation = (int)Random.Range(1, 4);
+                        int chosenRotation = 90 * randomRotation;
+                        //ROOF ROTATION RANDOMIZER END
+                        child = Instantiate(treePrefab, transform.position + Vector3.up * 1.01f, Quaternion.identity, this.transform);
+                        child.transform.Rotate(0, chosenRotation, 0); //APPLIES RANDOM ROTATION
                         int meshNum = myProfile.roofBlocks.Length;
                         int matNum = myProfile.roofMaterials.Length;
                         Debug.Log(child.GetComponents<TreeTowerBlock>().Length);
